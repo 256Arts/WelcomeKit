@@ -30,8 +30,6 @@ struct WelcomeFeatureView: View {
     }
 }
 
-struct WelcomeFeatureView_Previews: PreviewProvider {
-    static var previews: some View {
-        WelcomeFeatureView(feature: WelcomeFeature(image: Image(systemName: "app.fill"), title: "Feature", body: "This feature is good."))
-    }
+#Preview {
+    WelcomeFeatureView(feature: WelcomeFeature(image: Image(systemName: "app.fill"), title: "Feature", body: "This feature is good."))
 }

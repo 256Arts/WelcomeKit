@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct WelcomeFeature: Identifiable {
+public struct WelcomeFeature: Equatable, Hashable, Identifiable {
 
     public var image: Image
     public var title: String
@@ -20,5 +20,9 @@ public struct WelcomeFeature: Identifiable {
         self.image = image
         self.title = title
         self.body = body
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }
